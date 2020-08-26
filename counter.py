@@ -25,7 +25,7 @@ CLASSES = [
 # instantiate 1 - Object Detector, 2 - Video Source, 3 - Centroid Tracker
 net = cv2.dnn.readNetFromCaffe(inputs["prototxt"], inputs["model"])
 vs = cv2.VideoCapture(inputs["input"])
-ct = CentroidTracker(maxDisappeared=40, maxDistance=50)
+ct = CentroidTracker(maxDisappeared=30, maxDistance=50)
 
 trackers = []
 trackableObjects = {}
